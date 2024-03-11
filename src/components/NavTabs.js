@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaPercentage, FaDice, FaQuestionCircle} from 'react-icons/fa'
+import {FaPercentage, FaQuestionCircle} from 'react-icons/fa'
 import {Box, Typography, Modal} from '@mui/material';
 
 
@@ -35,17 +35,6 @@ export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
         </a>
       </li>
     
-      <li className="nav-item">
-        <a
-        href="#rolls"
-        onClick={() => handleCalculatorChange('Rolls')}
-
-        className={currentCalculator === 'Rolls' ? 'nav-link active' : 'nav-link'}
-        >
-        <FaDice className = 'proj'/>
-        </a>
-      </li>
-
       <li className="nav-item nav-link" href="#rolls"
         onClick={handleOpen}>
         
@@ -63,7 +52,7 @@ export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
             Instructions:
           </Typography>
           <Typography id="usage instructions" sx={{ mt: 2 }}>
-            Input the your probability and either the number of tries (rolls), or desired confidence. Calculations made will be saved locally and displayed below the relevant calculator
+            Poppin Candy Fever
           </Typography>
         </Box>
       </Modal>

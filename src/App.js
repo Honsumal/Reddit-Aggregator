@@ -1,7 +1,7 @@
 import React from "react";
-import Calculator from "./components/Calculator"
+import Home from "./components/Home"
 
 
-const App = () => <Calculator />;
+const App = () => <Home />;
 
 export default App;
