@@ -26,18 +26,26 @@ body {
 
 .container3 {
     background-color: var(--lmm);
+    width: 80%
 }
 
 /* Page Header */
 h1 {
     display: inline-block;
     font-size: 28px;
-    color: var(--lmm);    
+    padding-top: 10px;
+    padding-left: 10px;
+    color: var(--prs);    
 }
 
 /* Section Header */
 h2 {
     font-size: 20px;
+    padding-left: 10px;
+}
+
+/* Text */
+text {
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -49,7 +57,7 @@ li {
     color: var(--lmm);
 }
 
-a {
+.headline {
    text-decoration: none;
    color:var(--lmm)
 }

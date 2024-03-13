@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaPercentage, FaQuestionCircle} from 'react-icons/fa'
-import {Box, Typography, Modal} from '@mui/material';
+import {Box, Typography, Modal, TextField} from '@mui/material';
 
 
 export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
@@ -25,7 +25,7 @@ export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
     <ul className="nav nav-tabs">
       <li><h1><a href='https://honsumal.github.io/portfolio/' className='headline'>Alastair Lee</a></h1></li>
 
-      <li className="nav-item">
+      <li className="nav-item ">
         <a
           href="#confidence"
           onClick={() => handleCalculatorChange('Confidence')}
@@ -56,6 +56,12 @@ export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
           </Typography>
         </Box>
       </Modal>
+
+      <li>
+        <Box sx={{ml:'auto'}}>
+          <TextField sx={{input:{color: '#fcbf49', width: 1000}}} placeholder="Search ..."  />
+        </Box>
+      </li>
     </ul>    
   );
 }

@@ -1,8 +1,8 @@
 {
-  "name": "gatcha-calculator",
+  "name": "news-aggregator-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://honsumal.github.io/probability-calculator",
+  "homepage": "https://honsumal.github.io/news-aggregator-react",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
