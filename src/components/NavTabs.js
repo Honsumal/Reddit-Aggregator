@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FaPercentage, FaQuestionCircle} from 'react-icons/fa'
-import {Box, Typography, Modal, TextField} from '@mui/material';
+import {Box, Typography, Modal} from '@mui/material';
 
 
-export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
+export default function NavTabs() {
 
   const style = {
     position: 'absolute',
@@ -17,22 +17,19 @@ export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
     p: 4,
   };
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  //const [query, setQuery] = useState('');
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
 
   return (
     <ul className="nav nav-tabs">
       <li><h1><a href='https://honsumal.github.io/portfolio/' className='headline'>Alastair Lee</a></h1></li>
 
       <li className="nav-item ">
-        <a
-          href="#confidence"
-          onClick={() => handleCalculatorChange('Confidence')}
-          className={currentCalculator === 'Confidence' ? 'nav-link active' : 'nav-link'}
-        >
           <FaPercentage className = 'home'/>
-        </a>
       </li>
     
       <li className="nav-item nav-link" href="#rolls"
@@ -56,12 +53,6 @@ export default function NavTabs({ currentCalculator, handleCalculatorChange }) {
           </Typography>
         </Box>
       </Modal>
-
-      <li>
-        <Box sx={{ml:'auto'}}>
-          <TextField sx={{input:{color: '#fcbf49', width: 1000}}} placeholder="Search ..."  />
-        </Box>
-      </li>
     </ul>    
   );
 }
