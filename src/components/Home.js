@@ -6,34 +6,33 @@ import {TextField, Box, Button} from '@mui/material'
 
 export default function Home() {
 
-let result= {articles:[
-    {
-        title: "Title 1",
-        link: "#",
-        author: "Source",
-        summary: "I am a teapot short and stout. Here is my handle here is my snout. Hashire zori yo, kaze no yo ni. Tsukimihara wo, padoru padoru."
-    },
-    {
-        title: "Title 2",
-        link: "#",
-        author: "Source",
-        summary: "I am a teapot short and stout. Here is my handle here is my snout. Hashire zori yo, kaze no yo ni. Tsukimihara wo, padoru padoru."
-    },
-    {
-        title: "Title 3",
-        link: "#",
-        author: "Source",
-        summary: "I am a teapot short and stout. Here is my handle here is my snout. Hashire zori yo, kaze no yo ni. Tsukimihara wo, padoru padoru."
-    }
+// let result= {articles:[
+//     {
+//         title: "Title 1",
+//         link: "#",
+//         author: "Source",
+//         summary: "I am a teapot short and stout. Here is my handle here is my snout. Hashire zori yo, kaze no yo ni. Tsukimihara wo, padoru padoru."
+//     },
+//     {
+//         title: "Title 2",
+//         link: "#",
+//         author: "Source",
+//         summary: "I am a teapot short and stout. Here is my handle here is my snout. Hashire zori yo, kaze no yo ni. Tsukimihara wo, padoru padoru."
+//     },
+//     {
+//         title: "Title 3",
+//         link: "#",
+//         author: "Source",
+//         summary: "I am a teapot short and stout. Here is my handle here is my snout. Hashire zori yo, kaze no yo ni. Tsukimihara wo, padoru padoru."
+//     }
     
-]
-}
+// ]
+//}
 
 
-    const [data, setData] = useState(result);
+
     const [input, setInput] = useState('');
-    const [kS, setKS] = useState(1);
-    const [count, setCount] = useState(0);
+    //const [count, setCount] = useState(0);
     const [article_list, setArticleList] = useState([]);
 
 
@@ -41,7 +40,6 @@ let result= {articles:[
     function handleSubmit(event) {
         event.preventDefault();
         console.log('Button Works');
-        setKS(Math.random())
         makeQuery(input)
     }
 
@@ -50,36 +48,12 @@ let result= {articles:[
         setInput(event.target.value)
     }
 
-// for (let i = 0; i < result.articles.length; i++) {
-
-//     article_list.push(
-
-//     <div>
-//         <div className='container2'>
-//                 <a href={result.articles[i].link}><h1>{result.articles[i].title}</h1></a>
-
-//                 <br></br>
-
-//                 <h2>{result.articles[i].author}</h2>
-
-//                 <br></br>
-                
-//                 <text>{result.articles[i].summary}</text>   
-                
-//         </div>
-
-//         <br></br>
-
-//     </div>
-//     )
-    
-// }
 
  
 //Query Testing
 function makeQuery (search) { 
 
-    console.log("senzaemon", search, data)
+    console.log("senzaemon", search)
 
     let options = {
         method: 'GET',
@@ -92,17 +66,14 @@ function makeQuery (search) {
       fetch('https://free-news.p.rapidapi.com/v1/search?q=' + search + '&lang=en', options)
         .then(response => response.json())
         .then(json => displayQuery(json))
-        // .then(console.log(count, kS))
         .catch(error => console.error(error));    
 }
 
 function displayQuery (dayta) {
-    setData(dayta)
-    setCount(count+1)
+
+    //setCount(count+1)
     
     let new_A = []
-
-    //console.log(dayta.articles)
    
     for (let i = 0; i < dayta.articles.length; i++) {
 
@@ -131,7 +102,7 @@ function displayQuery (dayta) {
 
     setArticleList(new_A)
     
-    console.log(article_list, data, count)
+    console.log(article_list)
 
 }
 

@@ -1,7 +1,7 @@
 # News Aggregator
 
 ## Description
-Project is WIP
+This is a simple webpage that pulls news headlines based off a search term that is entered into the search bar. The user is given a summary of the story, and can click on the story in order to read the whole thing.
 
 ## Table of Contents
 
