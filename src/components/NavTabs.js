@@ -49,7 +49,7 @@ export default function NavTabs() {
             Instructions:
           </Typography>
           <Typography id="usage instructions" sx={{ mt: 2 }}>
-            Poppin Candy Fever
+            Search News by typing search term into box!
           </Typography>
         </Box>
       </Modal>
